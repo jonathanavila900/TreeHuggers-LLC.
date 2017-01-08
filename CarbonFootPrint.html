@@ -12,7 +12,13 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		    <link rel = "stylesheet" type = "text/css" href = "calculator.css">
+    <link rel = "stylesheet" type = "text/javascript" href = "calculator.js">
+    <script src = "calculator.js"></script>
+    <script></script>
 	</head>
+
+
 	<body>
 		<div id="page-wrapper">
 			<div id="header-wrapper">
@@ -34,10 +40,95 @@
 					</div>
 				</div>
 			</div>
+
+
+
+
 			<div id="main">
 				<div class="container">
 					<div class="row main-row">
+
+
+
+
+							<div class="8u 12u(mobile)">
+
+							<h2> car·bon foot·print</h2>
+							<h3>	noun   </h3>
+							<h3>the amount of carbon dioxide and other carbon compounds emitted due to the consumption of fossil fuels by a particular person, group, etc. </h3>
+
+							</div>
+
+
+
+							<div class="8u 12u(mobile)">
+
+							<h2> Pledge to Plant trees</h2>
+							<h3> ECO-lloborate will plant 1 tree for every 100 points you earn!</h3>
+							<h4> Join us and track yourself as you learn to become a greener community member. In the process you can convert the points you earn, to help reforest our Earth.</h4>
+
+							<h4> We offer many opportunities for users to learn about green habits as well earn points.</h4>
+							<h4> Challenge your friends and see who can improce their ECO Score and see how you compare to other participants.</h4>
+							</div>
+
+
+							<div>
+									<div id="calculator"
+	<!-- Screen and clear key -->
+	<div class="top">
+		<span class="clear">C<input type = "button" id = "startBtn" value = "" onclick = "clearContent()">
+    </span>
+		<div class="screen"></div>
+	</div>
+	
+	<div class="keys">
+		<!-- operators and other keys -->
+    <form>
+    Select consumption:
+      <select id="mySelect1">
+        <option data-cost = "-50">Clothing</option>
+        <option data-cost = "-100">Electronics</option>
+        <option data-cost = "-75">Furnishing</option>
+      </select>
+      <br><br>
+      <span><input type="button" id = "select1" onclick="getOption1()" value="Enter!"></span>
+    </form>
+
+    <form>
+      Enter food/item:
+      <select id="mySelect2">
+        <option data-cost = "5">Quick Snack</option>
+        <option data-cost = "50">Home-Made</option>
+        <option data-cost = "-25">Take-Out</option>
+        <option data-cost = "-50">Dine-In</option>
+      </select>
+      <br><br>
+      <span><input type="button" id = "select2" onclick="getOption2()" value="Enter!"></span>
+    </form>
+
+    <form>
+      Enter transportation:
+      <select id="mySelect3">
+        <option data-cost = "25">Walking</option>
+        <option data-cost = "50">Biking</option>
+        <option data-cost  = "30">Public</option>
+        <option data-cost = "-50">Driving</option>
+      </select>
+      <br><br>
+      <span><input type="button" id = "select3" onclick="getOption3()" value="Enter!"></span>
+    </form> 
+
+    <span><input type="button" id ="compute" onclick="computeTotal()" value="Compute"></span>
+     
+	</div>
+								
+
+							</div>
+
+
+
 						<div class="8u 12u(mobile)">
+
 
 							<p>Enter the following information to calculate your ECO score for today:</p>
 
@@ -89,17 +180,25 @@
 						<div class="4u 12u(mobile)">
 
 							<section>
-								<h2>Who are you guys?</h2>
+								<h2>How we calculate your ECO Score?</h2>
 								<ul class="small-image-list">
 									<li>
-										<a href="#"><img src="images/pic2.jpg" alt="" class="left" /></a>
-										<h4>Jane Anderson</h4>
-										<p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo facilisis amet quis.</p>
+										<h3>Travel</h3>
+										<p> -penalize users for using costly methods. </p>
+										<p> -reward for green travel</p>
+										<p> Factors such as length time and type of vechile will affect score. </p>
+										<h3>Food</h3>
+										<p> -a food's modifier will change on whether it is in season</p>
+										<p> -the calculator will add any carbon emissions produced from the packaging and shipment</p>
+										<p> -user redeem the deductions by recycling the materials after </p>
+										<h3>Acitivity</h3>
+										<p> -users will receive points for being active (signing petitions, volunteering with local ECOgroups, and supporting any verified ECO ngo of your choice) </p>
+
 									</li>
 									<li>
-										<a href="#"><img src="images/pic1.jpg" alt="" class="left" /></a>
-										<h4>James Doe</h4>
-										<p>Vitae magna eget odio amet mollis justo facilisis amet quis. Sed sagittis consequat.</p>
+									
+									
+									
 									</li>
 								</ul>
 							</section>
