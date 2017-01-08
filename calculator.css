@@ -33,9 +33,9 @@ html {
 }
 
 /* Top portion */
-.top span.clear {
+/*.top span.clear {
 	float: left;
-}
+}*/
 
 /* Inset shadow on the screen to create indent */
 .top .screen {
@@ -63,7 +63,7 @@ html {
 .keys, .top {overflow: hidden;}
 
 .top span.clear {
-  float: left
+  float: left;
   position: relative;
   top: 0;
   
@@ -109,6 +109,7 @@ html {
 	/* Smoothing out hover and active states using css3 transitions */
 	transition: all 0.2s ease;
 }
+
 
 /* Remove right margins from operator keys */
 /* style different type of keys (operators/evaluate/clear) differently */
@@ -162,4 +163,34 @@ html {
 .top span.clear:active {
 	top: 4px;
 	box-shadow: 0px 0px #d3545d;
+}
+
+#startBtn {
+	height: 100px; 
+	width: 50px; 
+	opacity: 0;
+}
+
+#select1 {
+	height: 25px; 
+	width: 500px; 
+	opacity: 1;
+}
+
+#select2 {
+	height: 25px; 
+	width: 500px; 
+	opacity: 1;
+}
+
+#select3 {
+	height: 25px; 
+	width: 500px; 
+	opacity: 1;
+}
+
+#compute {
+	height: 25px; 
+	width: 500px; 
+	opacity: 1;
 }

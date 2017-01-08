@@ -2,41 +2,16 @@
   <head>
     <title>Eco-Calculator</title>
     <link rel = "stylesheet" type = "text/css" href = "calculator.css">
-    <link rel = "stylesheet" type = "text/js" href = "calculator.js">
+    <link rel = "stylesheet" type = "text/javascript" href = "calculator.js">
     <script src = "calculator.js"></script>
     <script></script>
-  </head>
+</head>
 
-<script>
-function getOption1() {
-    var obj = document.getElementById("mySelect1");
-    //document.getElementById("demo1").innerHTML = 
-    var tmp = obj.options[obj.selectedIndex].text
-    var map = {"Electronics": -200}
-    alert(map[tmp])
-;}
-</script>
-
-<script>
-function getOption2() {
-    var obj = document.getElementById("mySelect2");
-    document.getElementById("demo2").innerHTML = 
-    obj.options[obj.selectedIndex].text;
-}
-</script>
-
-<script>
-function getOption3() {
-    var obj = document.getElementById("mySelect3");
-    document.getElementById("demo3").innerHTML = 
-    obj.options[obj.selectedIndex].text;
-}
-</script>
-
-<div id="calculator">
+<div id="calculator"
 	<!-- Screen and clear key -->
 	<div class="top">
-		<span class="clear">C</span>
+		<span class="clear">C<input type = "button" id = "startBtn" value = "" onclick = "clearContent()">
+    </span>
 		<div class="screen"></div>
 	</div>
 	
@@ -45,43 +20,42 @@ function getOption3() {
     <form>
     Select consumption:
       <select id="mySelect1">
-        <option>Electronics</option>
-        <option>Clothing</option>
-        <option>Vehicles</option>
+        <option data-cost = "-50">Clothing</option>
+        <option data-cost = "-100">Electronics</option>
+        <option data-cost = "-75">Furnishing</option>
       </select>
       <br><br>
-      <span><input type="button" onclick="getOption1()" value="Enter!"></span>
+      <span><input type="button" id = "select1" onclick="getOption1()" value="Enter!"></span>
     </form>
-    <p id="demo1"></p>
-    
+
     <form>
       Enter food/item:
       <select id="mySelect2">
-        <option>Take-Out</option>
-        <option>Dine-In</option>
-        <option>Home-Made </option>
-        <option>Quick Snack</option>
+        <option data-cost = "5">Quick Snack</option>
+        <option data-cost = "50">Home-Made</option>
+        <option data-cost = "-25">Take-Out</option>
+        <option data-cost = "-50">Dine-In</option>
       </select>
       <br><br>
-      		<span><input type="button" onclick="getOption2()" value="Enter!"></span>
+      <span><input type="button" id = "select2" onclick="getOption2()" value="Enter!"></span>
     </form>
-    
-    <p id="demo2"></p>
-    
+
     <form>
       Enter transportation:
       <select id="mySelect3">
-        <option>Walking</option>
-        <option>Biking</option>
-        <option>Public</option>
-        <option>Driving</option>
+        <option data-cost = "25">Walking</option>
+        <option data-cost = "50">Biking</option>
+        <option data-cost  = "30">Public</option>
+        <option data-cost = "-50">Driving</option>
       </select>
       <br><br>
-      		<span><input type="button" onclick="getOption3()" value="Enter!"></span>
-     </form> 
-     <p id="demo3"></p>
+      <span><input type="button" id = "select3" onclick="getOption3()" value="Enter!"></span>
+    </form> 
+
+    <span><input type="button" id ="compute" onclick="computeTotal()" value="Compute"></span>
      
 	</div>
 <!-- PrefixFree -->
 <script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript" type="text/javascript"></script>
+
 </html>
