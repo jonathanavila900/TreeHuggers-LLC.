@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>Eco-Calculator</title>
+    <link rel = "stylesheet" type = "text/css" href = "calculator.css">
+    <link rel = "stylesheet" type = "text/js" href = "calculator.js">
+    <script src = "calculator.js"></script>
+    <script></script>
+  </head>
+
+<script>
+function getOption1() {
+    var obj = document.getElementById("mySelect1");
+    //document.getElementById("demo1").innerHTML = 
+    var tmp = obj.options[obj.selectedIndex].text
+    var map = {"Electronics": -200}
+    alert(map[tmp])
+;}
+</script>
+
+<script>
+function getOption2() {
+    var obj = document.getElementById("mySelect2");
+    document.getElementById("demo2").innerHTML = 
+    obj.options[obj.selectedIndex].text;
+}
+</script>
+
+<script>
+function getOption3() {
+    var obj = document.getElementById("mySelect3");
+    document.getElementById("demo3").innerHTML = 
+    obj.options[obj.selectedIndex].text;
+}
+</script>
+
+<div id="calculator">
+	<!-- Screen and clear key -->
+	<div class="top">
+		<span class="clear">C</span>
+		<div class="screen"></div>
+	</div>
+	
+	<div class="keys">
+		<!-- operators and other keys -->
+    <form>
+    Select consumption:
+      <select id="mySelect1">
+        <option>Electronics</option>
+        <option>Clothing</option>
+        <option>Vehicles</option>
+      </select>
+      <br><br>
+      <span><input type="button" onclick="getOption1()" value="Enter!"></span>
+    </form>
+    <p id="demo1"></p>
+    
+    <form>
+      Enter food/item:
+      <select id="mySelect2">
+        <option>Take-Out</option>
+        <option>Dine-In</option>
+        <option>Home-Made </option>
+        <option>Quick Snack</option>
+      </select>
+      <br><br>
+      		<span><input type="button" onclick="getOption2()" value="Enter!"></span>
+    </form>
+    
+    <p id="demo2"></p>
+    
+    <form>
+      Enter transportation:
+      <select id="mySelect3">
+        <option>Walking</option>
+        <option>Biking</option>
+        <option>Public</option>
+        <option>Driving</option>
+      </select>
+      <br><br>
+      		<span><input type="button" onclick="getOption3()" value="Enter!"></span>
+     </form> 
+     <p id="demo3"></p>
+     
+	</div>
+<!-- PrefixFree -->
+<script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript" type="text/javascript"></script>
+</html>
